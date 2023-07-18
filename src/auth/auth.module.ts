@@ -1,4 +1,10 @@
+/* eslint-disable prettier/prettier */
+import { AuthService } from './auth.service';
 import { Module } from "@nestjs/common";
+import { AuthController } from "./auth.controller";
 
-@Module({})
+@Module({
+    controllers: [AuthController],
+    providers: [AuthService]
+})
 export class AuthModule {}
